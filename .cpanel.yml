@@ -1,0 +1,7 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/overnzbk/kids.overseashighwaystudy.com/
+    - /bin/mkdir -p "$DEPLOYPATH"
+    - /bin/cp -R . "$DEPLOYPATH"
+    - /bin/rm -rf "$DEPLOYPATH/.git" "$DEPLOYPATH/.cpanel.yml"
