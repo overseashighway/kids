@@ -5,3 +5,4 @@ deployment:
     - /bin/mkdir -p "$DEPLOYPATH"
     - /bin/cp -R . "$DEPLOYPATH"
     - /bin/rm -rf "$DEPLOYPATH/.git" "$DEPLOYPATH/.cpanel.yml"
+    - /bin/chmod 750 "$DEPLOYPATH"
