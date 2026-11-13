@@ -3,6 +3,5 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/overnzbk/kids.overseashighwaystudy.com/
     - /bin/mkdir -p "$DEPLOYPATH"
-    - /bin/cp -R . "$DEPLOYPATH"
-    - /bin/rm -rf "$DEPLOYPATH/.git" "$DEPLOYPATH/.cpanel.yml"
+    - /bin/tar --exclude=.git --exclude=.cpanel.yml -cf - . | /bin/tar -xf - -C "$DEPLOYPATH"
     - /bin/chmod 750 "$DEPLOYPATH"
